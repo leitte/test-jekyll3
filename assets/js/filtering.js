@@ -14,20 +14,41 @@ document.addEventListener("DOMContentLoaded", function () {
       // Otherwise, filter based on selected tags
       posts.forEach(post => {
         const postTags = post.dataset.tags.split(",");
-        if ([...selectedTags].some(tag => postTags.includes(tag))) {
+        if ([...selectedTags].every(tag => postTags.includes(tag))) {
           post.style.display = "block";
         } else {
           post.style.display = "none";
         }
       });
     }
+
+    function updateCounts() {
+        const posts_active = [...document.querySelectorAll(".post-item")].filter(
+            post => getComputedStyle(post).display !== "none"
+          );
+        const tagCounts = {};
+
+        posts_active.forEach(post => {
+            post.dataset.tags.split(",").forEach(tag => {
+              tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+            });
+          });
+
+        // console.log(tagCounts)
+        buttons.forEach(tagElement => {
+            const tag = tagElement.dataset.tag;
+            const countSpan = tagElement.querySelector(".tag-count");
+            countSpan.textContent = tagCounts[tag] || 0;
+          });
+    }
   
     // Event listener for each button
     buttons.forEach(button => {
+        console.log('hi');
       button.addEventListener("click", function (event) {
         event.preventDefault(); // Prevents navigation (optional)
         const tag = this.dataset.tag;
-        alert("Link clicked!" + tag);
+        // alert("Link clicked!" + tag);
   
         if (selectedTags.has(tag)) {
           selectedTags.delete(tag);
@@ -37,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
           this.classList.add("active"); // Mark as active
         }
   
-        // updatePosts(); // Update post visibility
+        updatePosts(); // Update post visibility
+        updateCounts();
       });
     });
   

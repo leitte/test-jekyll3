@@ -25,13 +25,39 @@ a.post-subtag {
     li {
         cursor: pointer;
     }
+
+    var {
+        font-style: normal;
+    }
+
+    .active {
+        span {
+            background: #ff5100;
+        }
+    }
 }
 
 [data-theme="dark"] {
-    .common-list {
+    .multilevel {
+        > ul > li > a {
+            padding-left: 0px;
+        }
+
         li {
             ul {
-                border-right: solid 1px #40404088;
+                border-left: solid 1px #40404088;
+                border-bottom: solid 1px #40404088;
+                // margin-left: 12px;
+            }
+
+            &:has(> ul) {
+                border-bottom: none;
+            }
+        }
+
+        .active {
+            span {
+                background: #ff5100;
             }
         }
     }
