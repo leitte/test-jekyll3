@@ -1,9 +1,9 @@
 import pathlib
-import pandas as pd
 import requests
 import time
 import yaml
-from urllib.parse import urlparse
+
+from utils import read_included_dois, safe_doi
 
 doi_filename = '_data/dois.csv'
 metadata_dir = pathlib.Path('_data/paper_metadata')
@@ -12,19 +12,11 @@ posts_dir = pathlib.Path('_posts')
 metadata_dir.mkdir(exist_ok=True)
 posts_dir.mkdir(exist_ok=True)
 
-def get_short_doi(full_doi):
-    parsed_url = urlparse(full_doi)
-    # If the DOI is a URL, get the path after 'doi.org/'
-    if parsed_url.netloc == "doi.org":
-        return parsed_url.path.lstrip("/")  # Remove the leading '/'
-    return full_doi
-
-safe_doi = lambda x: x.replace("/", "_")
-
-df = pd.read_csv(doi_filename, names=['doi'])
-df['doi'] = df.doi.apply(get_short_doi)
+df = read_included_dois(doi_filename)
+existing_metadata_files = {f.name for f in metadata_dir.glob("*.yml")}
 
 def download_metadata(doi):
+    '''Download paper metadata from semanticscholar.'''
     params = {
         "fields": "referenceCount,citationCount,title,abstract,externalIds,year,publicationDate,authors,venue"
     }
@@ -39,8 +31,6 @@ def download_metadata(doi):
     if r.status_code == 200:
         return r.json()
     return None
-
-existing_metadata_files = {f.name for f in metadata_dir.glob("*.yml")}
 
 # check for each doi if we have the metadata yet
 for doi in df['doi']:
