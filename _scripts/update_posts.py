@@ -1,5 +1,6 @@
 import pathlib
 import yaml
+import re
 
 from utils import format_authors, get_date
 
@@ -35,7 +36,13 @@ for metadata_file in metadata_dir.glob("*.yml"):
     # print(metadata['abstract'])
     # print(metadata_file.with_suffix('.md').name)
 
+    # jekyll only allow '-' as special characters in filenames
     post_filename = metadata_file.with_suffix('.md').name
+    name, ext = post_filename.rsplit('.', 1)
+    filename_jekyllFormat = re.sub(r'[^a-zA-Z0-9]', '-', name)
+    post_filename = f'{filename_jekyllFormat}.{ext}'
+
+    # now save
     with open(posts_dir / post_filename, 'w') as file:
         file.write('---\n')
         yaml.safe_dump(header, file)
