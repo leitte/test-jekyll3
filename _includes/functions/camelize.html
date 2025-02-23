@@ -1,0 +1,6 @@
+{% assign words = text | split: ' ' %}
+{% assign return = '' %}
+{% for word in words %}
+    {% assign word_cap = word | capitalize %}
+    {% assign return = return | append: word_cap %}
+{% endfor %}

@@ -1,13 +1,11 @@
-{%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
+{%- assign date_format = site.yat.date_format | default: "%Y" -%}
 
 {%- assign article = post.content -%}
 {%- assign lang = post.lang -%}
-{%- include functions.html func='get_reading_time' -%}
-{%- assign reading_time = return -%}
 
 {%- include functions.html func='get_article_excerpt' -%}
 {%- assign article_excerpt = return -%}
-{%- assign post_url = post.url | relative_url -%}
+{%- assign post_url = "https://doi.org/" | append: post.doi -%}
 
 {%- assign name = 'excerpt.image_width' -%}
 {%- include functions.html func='get_value' -%}
@@ -29,9 +27,8 @@
 
 <li class="post-item {{ post_item_class }}">
   <h2 class="post-title">
-    <a class="post-link" href="{{ post_url }}">
+    <a class="post-link" href="{{ post_url }}" target="_blank">
       {{ post.title | escape }}
-      <!-- {%- include views/post-badges.html -%} -->
     </a>
   </h2>
   <div class="post-meta">
@@ -39,11 +36,16 @@
     {%- if post.author -%}
     <span class="post-author left-vsplit"><i class="fa fa-pencil"></i> {{ post.author | escape }}</span>
     {%- endif -%}
-    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
+    {%- if post.venue -%}
+    <span class="post-venue left-vsplit"><i class="fa fa-book"></i> {{ post.venue }}</span>
+    {%- endif -%}
+    {%- if post.citationCount -%}
+    <span class="post-citation-count left-vsplit"><i class="fa fa-quote-left"></i> {{ post.citationCount }}</span>
+    {%- endif -%}
   </div>
   <div class="post-excerpt">
     {%- if post_image and post_image != 'NO_EXCERPT_IMAGE' -%}
-    <a  class="post-image" href="{{ post_url }}" style="flex: 0 1 {{ image_width }}">
+    <a  class="post-image" href="{{ post_url }}" style="visibility: hidden; flex: 0 1 {{ image_width }}">
       <div style="background-image: url({{ post_image | relative_url }}); height: {{ image_height }}"></div>
     </a>
     {%- endif -%}
@@ -52,8 +54,15 @@
     </a>
   </div>
   <div class="post-tags">
+    {%- for tag in post.categories -%}
+    <a class="post-tag" data-label="{{ tag }}">#{{tag}}</a>
+    {%- endfor -%}
+  </div>
+  <div class="post-tags">
     {%- for tag in post.tags -%}
-    <a class="post-tag" href="{{ '/tags.html ' | relative_url }}#{{tag}}">#{{tag}}</a>
+      {%- assign text = tag -%}
+      {%- include functions.html func='camelize' -%}
+    <a class="post-subtag" href="{{ '/tags.html ' | relative_url }}#{{tag}}" data-label="{{ tag }}">#{{return}}</a>
     {%- endfor -%}
   </div>
 </li>

@@ -1,10 +1,25 @@
 ---
+
 ---
+
 
 // a.post-text {
 //     text-decoration: none;
 // }
 
+.pagination {
+    .post-text {
+        color: #777;
+        text-decoration: none;
+    }
+}
+
+a.post-subtag {
+    margin-right: 8px;
+    text-decoration: none;
+    color: #777;
+    font-size: 12px;
+}
 
 [data-theme="dark"] {
     .common-list {
