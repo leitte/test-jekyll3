@@ -22,7 +22,7 @@ for metadata_file in metadata_dir.glob("*.yml"):
               'excerpt_image': 'NO_EXCERPT_IMAGE',
               'author': format_authors(metadata.get('authors', [])),
               'title': metadata.get('title'),
-              'date': get_date(metdata),
+              'date': get_date(metadata),
               'venue': metadata.get('venue'),
               'citationCount': metadata.get('citationCount'),
               'doi': metadata['externalIds']['DOI'],
