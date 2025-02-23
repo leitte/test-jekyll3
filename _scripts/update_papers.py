@@ -3,7 +3,7 @@ import requests
 import time
 import yaml
 
-from utils import read_included_dois, safe_doi
+from utils import read_included_dois, safe_doi, get_date
 
 doi_filename = '_data/dois.csv'
 metadata_dir = pathlib.Path('_data/paper_metadata')
@@ -39,7 +39,7 @@ for doi in df['doi']:
     if not any(doi_safe.lower() in filename.lower() for filename in existing_metadata_files):
         metadata = download_metadata(doi)
         firstAuthor_lastName = metadata['authors'][0]['name'].split(' ')[-1]
-        date = metadata['publicationDate'] if metadata['publicationDate'] else f'{metadata['year']}-01-01'
+        date = get_date(metadata)
 
         metadata_filename = metadata_dir / f'{date}_{firstAuthor_lastName}_{doi_safe}.yml'
         with open(metadata_filename, 'w') as file:

@@ -1,7 +1,7 @@
 import pathlib
 import yaml
 
-from utils import format_authors
+from utils import format_authors, get_date
 
 metadata_dir = pathlib.Path('_data/paper_metadata')
 posts_dir = pathlib.Path('_posts')
@@ -10,6 +10,7 @@ metadata_dir.mkdir(exist_ok=True)
 posts_dir.mkdir(exist_ok=True)
 
 #existing_metadata_files = {f.name for f in metadata_dir.glob("*.yml")}
+
 
 for metadata_file in metadata_dir.glob("*.yml"):
     with open(metadata_file) as file:
@@ -21,6 +22,7 @@ for metadata_file in metadata_dir.glob("*.yml"):
               'excerpt_image': 'NO_EXCERPT_IMAGE',
               'author': format_authors(metadata.get('authors', [])),
               'title': metadata.get('title'),
+              'date': get_date(metdata),
               'venue': metadata.get('venue'),
               'citationCount': metadata.get('citationCount'),
               'doi': metadata['externalIds']['DOI'],

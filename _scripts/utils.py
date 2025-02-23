@@ -27,3 +27,6 @@ def format_authors(author_list: list[dict]):
     elif len(authors) == 1:
         return authors[-1]
     return ', '.join(authors[:-1]) + ' & ' + authors[-1]
+
+def get_date(metadata: dict):
+    return metadata['publicationDate'] if metadata['publicationDate'] else f'{metadata['year']}-01-01'
