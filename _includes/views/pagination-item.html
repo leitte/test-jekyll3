@@ -25,7 +25,12 @@
   | default: default_image
   | default: '/assets/images/default-image.jpeg' -%}
 
-<li class="post-item {{ post_item_class }}">
+{%- include functions.html func='taxonomy_id_to_label_map' -%}
+{%- assign tagId2label = return -%}
+
+
+
+<li class="post-item {{ post_item_class }}" data-tags="{{ post.tags | join: ',' }}">
   <h2 class="post-title">
     <a class="post-link" href="{{ post_url }}" target="_blank">
       {{ post.title | escape }}
@@ -60,9 +65,10 @@
   </div>
   <div class="post-tags">
     {%- for tag in post.tags -%}
-      {%- assign text = tag -%}
-      {%- include functions.html func='camelize' -%}
-    <a class="post-subtag" href="{{ '/tags.html ' | relative_url }}#{{tag}}" data-label="{{ tag }}">#{{return}}</a>
+      {%- include functions.html func='taxonomy_id_to_label_map' -%}
+      {% assign tag_info = return %}
+      
+      <a class="post-subtag" href="{{ '/tags.html ' | relative_url }}#{{tag}}" data-label="{{ tag }}">#{{tag_info}}</a>
     {%- endfor -%}
   </div>
 </li>

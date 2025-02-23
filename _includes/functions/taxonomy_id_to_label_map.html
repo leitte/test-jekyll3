@@ -1,0 +1,17 @@
+
+{% assign return = tag %}
+
+{% assign tag_label = site.data.taxonomy | where: "id", tag | first %}
+
+{% if tag_label %}
+    {% assign return = tag_label.label %}
+{% else %}
+    {% for item in site.data.taxonomy %}
+        {% if item.children %}
+            {% assign tag_label = item.children | where: "id", tag | first %}
+            {% if tag_label %}
+                {% assign return = tag_label.label %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

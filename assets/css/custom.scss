@@ -21,6 +21,12 @@ a.post-subtag {
     font-size: 12px;
 }
 
+.multilevel {
+    li {
+        cursor: pointer;
+    }
+}
+
 [data-theme="dark"] {
     .common-list {
         li {
