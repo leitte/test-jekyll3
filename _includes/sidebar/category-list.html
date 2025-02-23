@@ -1,0 +1,23 @@
+{%- include functions.html func='get_categories' -%}
+{% assign categories = return %}
+
+{% assign field = 'categories' %}
+
+<div class="common-list multilevel">
+    <ul>
+        {% for term in site.data.taxonomy %}
+            <li>
+                <a>
+                    {{ term.label }} <span>{{ site.posts | size }} / {{ site.posts | size }}</span>
+                </a>
+                {% if term.children %}
+                    <ul>
+                    {% for subterm in term.children %}
+                        <li><a> {{ subterm.label }} <span>{{ site.posts | where: field, subterm.label | size }} / {{ site.posts | size }} </a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

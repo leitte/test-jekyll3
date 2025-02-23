@@ -1,0 +1,16 @@
+- id: PaperType
+  label: paper type
+  children:
+    - id: Survey
+      label: survey
+    - id: Method
+      label: method
+    - id: Evaluation
+      label: evaluation
+- id: Data
+  label: data
+  children:
+    - id: Jekyll
+      label: jekyll
+- id: Infrastructure
+  label: infrastructure
