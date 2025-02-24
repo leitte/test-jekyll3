@@ -8,7 +8,7 @@ on:
   push:
     paths:
       - '_data/dois.csv'
-      - '_data/paper_metadata/'
+      - _data/paper_metadata/**
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
