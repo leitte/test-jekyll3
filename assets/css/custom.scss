@@ -26,6 +26,11 @@ a.post-subtag {
         cursor: pointer;
     }
 
+    > ul > li > a {
+        // padding-left: 0px;
+        font-weight: bold;
+    }
+
     var {
         font-style: normal;
     }
@@ -47,7 +52,7 @@ a.post-subtag {
             ul {
                 border-left: solid 1px #40404088;
                 border-bottom: solid 1px #40404088;
-                // margin-left: 12px;
+                margin-left: 12px;
             }
 
             &:has(> ul) {
@@ -65,20 +70,24 @@ a.post-subtag {
 
 [data-theme="light"] {
     .multilevel {
-        > ul > li > a {
-            padding-left: 0px;
-        }
+
 
         li {
             ul {
-                border-left: solid 1px #00000018;
-                border-bottom: solid 1px #00000018;
-                // margin-left: 12px;
+                border-left: solid 1px #00000028;
+                border-bottom: solid 1px #00000028;
+                margin-left: 12px;
+
+                > li:last-of-type > ul {
+                    border-bottom: none;
+                }
             }
 
             &:has(> ul) {
                 border-bottom: none;
             }
+
+
         }
     }
 }

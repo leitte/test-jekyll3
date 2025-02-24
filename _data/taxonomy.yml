@@ -10,7 +10,61 @@
 - id: Data
   label: data
   children:
-    - id: Jekyll
-      label: jekyll
+    - id: ProcessType
+      label: process type
+      children:
+        - id: TimeSeries
+        - id: Events
+    - id: AttributeType
+      label: attribute type
+      children:
+        - id: NumericAttribute
+        - id: RankBasedAttribute
+        - id: MultiVariateAttribute
+    - id: Cardinality
+      children:
+        - id: SingleTimeSeries
+        - id: MultipleTimeSeries
+        - id: GroupedTimeSeries
 - id: Infrastructure
   label: infrastructure
+  children:
+    - id: TimeSeriesRepresentation
+    - id: SimilarityMeasure
+    - id: DataStructure
+    - id: DataPreprocessing
+    - id: Provenance
+- id: VisualRepresentation
+  children:
+    - id: ChartType
+    - id: VisualLayout
+      children:
+        - id: SingleViewLayout
+        - id: MultiViewLayout
+        - id: MultiFormLayout
+    - id: TemporalEncoding
+      children:
+        - id: ExplicitTemporalEncoding
+        - id: ImplicitTemporalEncoding
+        - id: NoTemporalEncoding
+- id: Evaluation
+  children:
+    - id: EvaluationOfVisualPerception
+    - id: EvaluationOfComputationalPerformance
+- id: Interaction
+  children:
+    - id: InteractiveNavigation
+    - id: InteractiveFiltering
+    - id: InteractiveQuerying
+- id: AnalysisTasks
+  children:
+    - id: Classification
+    - id: Clustering
+    - id: OutlierDetection
+- id: TechnicalChallenges
+  children:
+    - id: Performance
+    - id: VisualComplexity
+    - id: StreamingData
+    - id: UncertaintyInData
+    - id: IrregularMissingData
