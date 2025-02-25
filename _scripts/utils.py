@@ -11,7 +11,7 @@ def short_doi(full_doi):
     return full_doi
 
 def read_included_dois(doi_filename):
-    df = pd.read_csv(doi_filename, names=['doi'])
+    df = pd.read_csv(doi_filename)
     df['doi'] = df.doi.apply(short_doi)
     return df
 
