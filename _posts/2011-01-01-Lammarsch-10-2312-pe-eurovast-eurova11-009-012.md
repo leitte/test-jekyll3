@@ -7,7 +7,7 @@ doi: 10.2312/PE/EUROVAST/EUROVA11/009-012
 excerpt_image: NO_EXCERPT_IMAGE
 layout: post
 tags:
-- method
+- Method
 title: Towards a Concept how the Structure of Time can Support the Visual Analytics
   Process
 venue: EuroVA@EuroVis
