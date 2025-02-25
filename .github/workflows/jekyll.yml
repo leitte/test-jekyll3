@@ -11,7 +11,7 @@ on:
   push:
     branches: ["main"]
     paths-ignore:
-      - _script/**
+      - _scripts/**
       - _data/paper_metadata/**
       - '_data/dois.csv'
 
