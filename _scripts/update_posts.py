@@ -44,5 +44,5 @@ for metadata_file in metadata_dir.glob("*.yml"):
         file.write('---\n')
         yaml.safe_dump(header, file)
         file.write('---\n')
-        file.write(metadata['abstract'])
+        file.write(metadata.get('abstract',''))
         file.write('\n')
