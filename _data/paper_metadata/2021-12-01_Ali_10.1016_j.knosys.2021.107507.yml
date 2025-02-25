@@ -1,0 +1,20 @@
+abstract: null
+authors:
+- authorId: '2111129061'
+  name: Mohammed Ali
+- authorId: '2093523'
+  name: R. Borgo
+- authorId: '2111035845'
+  name: Mark W. Jones
+citationCount: 12
+externalIds:
+  CorpusId: 240544915
+  DBLP: journals/kbs/AliBJ21
+  DOI: 10.1016/j.knosys.2021.107507
+  MAG: '3200490011'
+paperId: 459fc4448bda8ce579cb09171b243308e1570ac8
+publicationDate: '2021-12-01'
+referenceCount: 57
+title: Concurrent time-series selections using deep learning and dimension reduction
+venue: Knowledge-Based Systems
+year: 2021

@@ -1,0 +1,38 @@
+abstract: Model selection in time series analysis is a challenging task for domain
+  experts in many application areas such as epidemiology, economy, or environmental
+  sciences. The methodology used for this task demands a close combination of human
+  judgement and automated computation. However, statistical software tools do not
+  adequately support this combination through interactive visual interfaces. We propose
+  a Visual Analytics process to guide domain experts in this task. For this purpose,
+  we developed the TiMoVA prototype that implements this process based on user stories
+  and iterative expert feedback on user experience. The prototype was evaluated by
+  usage scenarios with an example dataset from epidemiology and interviews with two
+  external domain experts in statistics. The insights from the experts' feedback and
+  the usage scenarios show that TiMoVA is able to support domain experts in model
+  selection tasks through interactive visual interfaces with short feedback cycles.
+authors:
+- authorId: '2581737'
+  name: "M. B\xF6gl"
+- authorId: '1696098'
+  name: W. Aigner
+- authorId: '3347135'
+  name: P. Filzmoser
+- authorId: '2265439'
+  name: T. Lammarsch
+- authorId: '1692521'
+  name: S. Miksch
+- authorId: '2941639'
+  name: A. Rind
+citationCount: 65
+externalIds:
+  CorpusId: 11993743
+  DBLP: journals/tvcg/BoglAFLMR13
+  DOI: 10.1109/TVCG.2013.222
+  MAG: '1977294046'
+  PubMed: '24051790'
+paperId: a8c326f50fdd8517a20de0f4f9f9b1471b53dc88
+publicationDate: '2013-12-01'
+referenceCount: 48
+title: Visual Analytics for Model Selection in Time Series Analysis
+venue: IEEE Transactions on Visualization and Computer Graphics
+year: 2013

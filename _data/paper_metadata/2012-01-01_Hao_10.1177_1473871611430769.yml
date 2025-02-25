@@ -1,0 +1,48 @@
+abstract: "The detection of frequently occurring patterns, also called motifs, in\
+  \ data streams has been recognized as an important task. To find these motifs, we\
+  \ use an advanced event encoding and pattern discovery algorithm. As a large time\
+  \ series can contain hundreds of motifs, there is a need to support interactive\
+  \ analysis and exploration. In addition, for certain applications, such as data\
+  \ center resource management, service managers want to be able to predict the next\
+  \ day\u2019s power consumption from the previous months\u2019 data. For this purpose,\
+  \ we introduce four novel visual analytics methods: (i) motif layout \u2013 using\
+  \ colored rectangles for visualizing the occurrences and hierarchical relationships\
+  \ of motifs; (ii) motif distortion \u2013 enlarging or shrinking motifs for visualizing\
+  \ them more clearly; (iii) motif merging \u2013 combining a number of identical\
+  \ adjacent motif instances to simplify the display; and (iv) pattern preserving\
+  \ prediction \u2013 using a pattern-preserving smoothing and prediction algorithm\
+  \ to provide a reliable prediction for seasonal data. We have applied these methods\
+  \ to three real-world datasets: data center chilling utilization, oil well production,\
+  \ and system resource utilization. The results enable service managers to interactively\
+  \ examine motifs and gain new insights into the recurring patterns to analyze system\
+  \ operations. Using the above methods, we have also predicted both power consumption\
+  \ and server utilization in data centers with an accuracy of 70\u201380%."
+authors:
+- authorId: '34625021'
+  name: M. Hao
+- authorId: '2733065'
+  name: M. Marwah
+- authorId: '2024783'
+  name: H. Janetzko
+- authorId: '1725067'
+  name: U. Dayal
+- authorId: '9106757'
+  name: D. Keim
+- authorId: '2681048'
+  name: D. Patnaik
+- authorId: '1755938'
+  name: Naren Ramakrishnan
+- authorId: '2111334611'
+  name: Ratnesh K. Sharma
+citationCount: 50
+externalIds:
+  CorpusId: 8064821
+  DBLP: journals/ivs/HaoMJDKPRS12
+  DOI: 10.1177/1473871611430769
+  MAG: '1991392515'
+paperId: df9016bb54c40a7b7a093c278cdf0fb6f40b2712
+publicationDate: '2012-01-01'
+referenceCount: 24
+title: Visual exploration of frequent patterns in multivariate time series
+venue: Information Visualization
+year: 2012

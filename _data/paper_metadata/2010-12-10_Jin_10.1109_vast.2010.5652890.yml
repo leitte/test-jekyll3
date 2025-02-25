@@ -1,0 +1,26 @@
+abstract: Finding patterns in temporal data is an important data analysis task in
+  many domains. Static visualizations can help users easily see certain instances
+  of patterns, but are not specially designed to support systematic analysis tasks,
+  such as finding all instances of a pattern automatically. VizPattern is an interactive
+  visual query environment that uses a comic strip metaphor to enable users to easily
+  and quickly define and locate complex temporal patterns. Evaluations provide evidence
+  that VizPattern is applicable in many domains, and that it enables a wide variety
+  of users to answer questions about temporal data faster and with fewer errors than
+  existing state-of-the-art visual analysis systems.
+authors:
+- authorId: '2115756739'
+  name: Jing Jin
+- authorId: '2628881'
+  name: Pedro A. Szekely
+citationCount: 36
+externalIds:
+  CorpusId: 7932829
+  DBLP: conf/ieeevast/JinS10
+  DOI: 10.1109/VAST.2010.5652890
+  MAG: '2030391899'
+paperId: 4cb2a38db249cc34bcb9c1e2dfd28e38d1128cbd
+publicationDate: '2010-12-10'
+referenceCount: 67
+title: Interactive querying of temporal data using a comic strip metaphor
+venue: 2010 IEEE Symposium on Visual Analytics Science and Technology
+year: 2010

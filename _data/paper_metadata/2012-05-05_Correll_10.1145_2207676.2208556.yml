@@ -1,0 +1,30 @@
+abstract: 'Visualizations often seek to aid viewers in assessing the big picture in
+  the data, that is, to make judgments about aggregate properties of the data. In
+  this paper, we present an empirical study of a representative aggregate judgment
+  task: finding regions of maximum average in a series. We show how a theory of perceptual
+  averaging suggests a visual design other than the typically-used line graph. We
+  describe an experiment that assesses participants'' ability to estimate averages
+  and make judgments based on these averages. The experiment confirms that this color
+  encoding significantly outperforms the standard practice. The experiment also provides
+  evidence for a perceptual averaging theory.'
+authors:
+- authorId: '11192438'
+  name: M. Correll
+- authorId: '38719815'
+  name: Danielle Albers
+- authorId: '1836170'
+  name: S. Franconeri
+- authorId: '1776507'
+  name: Michael Gleicher
+citationCount: 80
+externalIds:
+  CorpusId: 14577625
+  DBLP: conf/chi/CorrellAFG12
+  DOI: 10.1145/2207676.2208556
+  MAG: '2110890346'
+paperId: e250c61ed60db08b8c545bdf9f8f80b96a20a903
+publicationDate: '2012-05-05'
+referenceCount: 44
+title: Comparing averages in time series data
+venue: International Conference on Human Factors in Computing Systems
+year: 2012

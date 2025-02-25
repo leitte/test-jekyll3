@@ -1,0 +1,32 @@
+abstract: The primary goal of Visual Analytics (VA) is the close intertwinedness of
+  human reasoning and automated methods. An important task for this goal is formulating
+  a description for such a VA process. We propose the design of a VA process description
+  that uses the inherent structure contained in time-oriented data as a way to improve
+  the integration of human reasoning. This structure can, for example, be seen in
+  the calendar aspect of time being composed of smaller granularities, like years
+  and seasons. Domain experts strongly consider this structure in their reasoning,
+  so VA needs to consider it, too.
+authors:
+- authorId: '2265439'
+  name: T. Lammarsch
+- authorId: '1696098'
+  name: W. Aigner
+- authorId: '2867431'
+  name: A. Bertone
+- authorId: '1692521'
+  name: S. Miksch
+- authorId: '2941639'
+  name: A. Rind
+citationCount: 19
+externalIds:
+  CorpusId: 18077496
+  DBLP: conf/eurova-ws/LammarschABMR11
+  DOI: 10.2312/PE/EUROVAST/EUROVA11/009-012
+  MAG: '1594602328'
+paperId: 1e4f9d7a52620d7655670a5d96f5bc23ac6108ff
+publicationDate: null
+referenceCount: 18
+title: Towards a Concept how the Structure of Time can Support the Visual Analytics
+  Process
+venue: EuroVA@EuroVis
+year: 2011

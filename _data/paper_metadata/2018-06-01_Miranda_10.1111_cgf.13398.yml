@@ -1,0 +1,51 @@
+abstract: "Advances in technology coupled with the availability of low\u2010cost sensors\
+  \ have resulted in the continuous generation of large time series from several sources.\
+  \ In order to visually explore and compare these time series at different scales,\
+  \ analysts need to execute online analytical processing (OLAP) queries that include\
+  \ constraints and group\u2010by's at multiple temporal hierarchies. Effective visual\
+  \ analysis requires these queries to be interactive. However, while existing OLAP\
+  \ cube\u2010based structures can support interactive query rates, the exponential\
+  \ memory requirement to materialize the data cube is often unsuitable for large\
+  \ data sets. Moreover, none of the recent space\u2010efficient cube data structures\
+  \ allow for updates. Thus, the cube must be re\u2010computed whenever there is new\
+  \ data, making them impractical in a streaming scenario. We propose Time Lattice,\
+  \ a memory\u2010efficient data structure that makes use of the implicit temporal\
+  \ hierarchy to enable interactive OLAP queries over large time series. Time Lattice\
+  \ is a subset of a fully materialized cube and is designed to handle fast updates\
+  \ and streaming data. We perform an experimental evaluation which shows that the\
+  \ space efficiency of the data structure does not hamper its performance when compared\
+  \ to the state of the art. In collaboration with signal processing and acoustics\
+  \ research scientists, we use the Time Lattice data structure to design the Noise\
+  \ Profiler, a web\u2010based visualization framework that supports the analysis\
+  \ of noise from cities. We demonstrate the utility of Noise Profiler through a set\
+  \ of case studies."
+authors:
+- authorId: '144838816'
+  name: "F\xE1bio Miranda"
+- authorId: '25020676'
+  name: Marcos Lage
+- authorId: '2163458'
+  name: Harish Doraiswamy
+- authorId: '1887741'
+  name: C. Mydlarz
+- authorId: '1786276'
+  name: J. Salamon
+- authorId: '51139353'
+  name: Y. Lockerman
+- authorId: '144162611'
+  name: J. Freire
+- authorId: '77129956'
+  name: "Cl\xE1udio T. Silva"
+citationCount: 20
+externalIds:
+  CorpusId: 51873868
+  DBLP: journals/cgf/MirandaLDMSLFS18
+  DOI: 10.1111/cgf.13398
+  MAG: '2819013036'
+paperId: abd9a96a974480ef40621d9deda48069e7462755
+publicationDate: '2018-06-01'
+referenceCount: 36
+title: 'Time Lattice: A Data Structure for the Interactive Visual Analysis of Large
+  Time Series'
+venue: Computer graphics forum (Print)
+year: 2018
