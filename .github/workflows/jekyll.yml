@@ -14,6 +14,7 @@ on:
       - _scripts/**
       - _data/paper_metadata/**
       - '_data/dois.csv'
+      - _data/tags.csv
 
   workflow_run:
     workflows: ["Update posts"]  # Name of the first workflow

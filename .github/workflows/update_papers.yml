@@ -8,6 +8,7 @@ on:
   push:
     paths:
       - '_data/dois.csv'
+      - _data/tags.csv
       - _data/paper_metadata/**
 
   # Allows you to run this workflow manually from the Actions tab
