@@ -8,6 +8,7 @@ excerpt_image: NO_EXCERPT_IMAGE
 layout: post
 tags:
 - Method
+- SingleTimeSeries
 title: Towards a Concept how the Structure of Time can Support the Visual Analytics
   Process
 venue: EuroVA@EuroVis
