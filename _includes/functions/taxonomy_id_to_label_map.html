@@ -4,13 +4,13 @@
 {% assign tag_label = site.data.taxonomy | where: "id", tag | first %}
 
 {% if tag_label %}
-    {% assign return = tag_label.label %}
+    {% assign return = tag_label.label | default: tag_label.id %}
 {% else %}
     {% for item in site.data.taxonomy %}
         {% if item.children %}
             {% assign tag_label = item.children | where: "id", tag | first %}
             {% if tag_label %}
-                {% assign return = tag_label.label %}
+                {% assign return = tag_label.label | default: tag_label.id %}
             {% endif %}
         {% endif %}
     {% endfor %}
