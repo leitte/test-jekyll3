@@ -61,6 +61,7 @@
     - id: Classification
     - id: Clustering
     - id: OutlierDetection
+    - id: PatternDetection
 - id: TechnicalChallenges
   children:
     - id: Performance
