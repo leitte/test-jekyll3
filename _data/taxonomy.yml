@@ -1,12 +1,14 @@
 - id: PaperType
   label: paper type
   children:
-    - id: Survey
+    - id: SurveyPaper
       label: survey
-    - id: Method
+    - id: TheoryPaper
+      label: theory
+    - id: MethodPaper
       label: method
-    - id: Evaluation
-      label: evaluation
+    - id: EmpiricalPaper
+      label: empirical
 - id: Data
   label: data
   children:
